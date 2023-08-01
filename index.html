@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Calculator</title>
+	<meta charset="utf-8" >
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+	<main>
+		<section>
+			<h1>Calculator</h1>
+			<p>A simple Calculator app using HTML, CSS and Javascript</p>
+			<p>It allows you to perform basic arithmetic operations such as addition, subtraction, multiplication, and division on two numbers. The calculator is designed with a user-friendly interface and responsive layout, making it accessible on various devices.</p>
+		</section>
+		<section>
+			<div class="calculator">
+					<input type="text" id="result" placeholder="|">
+					<button onclick="clearResult()" id="clear_btn">Clear</button>
+				<div class="buttons">
+					<button onclick="appendToResult('7')">7</button>
+					<button onclick="appendToResult('8')">8</button>
+					<button onclick="appendToResult('9')">9</button>
+					<button onclick="appendToResult('/')">/</button>
+					<button onclick="appendToResult('4')">4</button>
+					<button onclick="appendToResult('5')">5</button>
+					<button onclick="appendToResult('6')">6</button>
+					<button onclick="appendToResult('*')">*</button>
+					<button onclick="appendToResult('1')">1</button>
+					<button onclick="appendToResult('2')">2</button>
+					<button onclick="appendToResult('3')">3</button>
+					<button onclick="appendToResult('-')">-</button>
+					<button onclick="appendToResult('0')">0</button>
+					<button onclick="appendToResult('.')">.</button>
+					<button onclick="appendToResult('+')">+</button>
+					<button onclick="calculateResult()" id="compute_btn">=</button>
+				</div>
+			</div>
+			<p>&copy; 2023 Khushal Naik. All rights reserved.</p>
+		</section>
+	</main>
+	
+    <script src="script.js"></script>
+</body>
+</html>
