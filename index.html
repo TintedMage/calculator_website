@@ -1,45 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
-	<meta charset="utf-8" >
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 	<main>
-		<section>
-			<h1>Calculator</h1>
-			<p>A simple Calculator app using HTML, CSS and Javascript</p>
-			<p>It allows you to perform basic arithmetic operations such as addition, subtraction, multiplication, and division on two numbers. The calculator is designed with a user-friendly interface and responsive layout, making it accessible on various devices.</p>
+		<section class="info-cont">
+			<h1>Calculator</h1> <h2>by khushal Naik</h2>
+			<br>
+			<p>A simple Calculator that performs basic arithmetic operations like 
+				addition, subtraction, multiplication, and division on 2 numbers.</p>
 		</section>
-		<section>
-			<div class="calculator">
-					<input type="text" id="result" placeholder="|">
-					<button onclick="clearResult()" id="clear_btn">Clear</button>
-				<div class="buttons">
+
+		<section class="calc-cont">
+			<div class="calc">
+				<input type="text" class="input-field" id="result"  placeholder="Calculate:" onkeypress="handleKeyPress(event)" oninput="filterInput()">
+				<div class="calc-btn-cont">
 					<button onclick="appendToResult('7')">7</button>
 					<button onclick="appendToResult('8')">8</button>
 					<button onclick="appendToResult('9')">9</button>
-					<button onclick="appendToResult('/')">/</button>
+					<button onclick="clearResult()">C</button>
 					<button onclick="appendToResult('4')">4</button>
 					<button onclick="appendToResult('5')">5</button>
 					<button onclick="appendToResult('6')">6</button>
-					<button onclick="appendToResult('*')">*</button>
+					<button onclick="appendToResult('/')">/</button>
 					<button onclick="appendToResult('1')">1</button>
 					<button onclick="appendToResult('2')">2</button>
 					<button onclick="appendToResult('3')">3</button>
 					<button onclick="appendToResult('-')">-</button>
+
 					<button onclick="appendToResult('0')">0</button>
 					<button onclick="appendToResult('.')">.</button>
+					<button onclick="appendToResult('*')">*</button>
 					<button onclick="appendToResult('+')">+</button>
-					<button onclick="calculateResult()" id="compute_btn">=</button>
+					<button onclick="calculateResult()">=</button>
 				</div>
 			</div>
-			<p>&copy; 2023 Khushal Naik. All rights reserved.</p>
+			<script src="script.js"></script>
 		</section>
 	</main>
-	
-    <script src="script.js"></script>
+	<footer>
+		<hr>
+		<p>&copy; 2023 Calculator App | Khushal Naik. All rights reserved.</p>
+	</footer>
 </body>
 </html>

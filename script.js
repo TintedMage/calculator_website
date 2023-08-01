@@ -1,16 +1,35 @@
+let result = document.getElementById('result');
+
 function appendToResult(value) {
-    document.getElementById("result").value += value;
+    result.value += value;
 }
 
 function clearResult() {
-    document.getElementById("result").value = "";
+    result.value = '';
 }
 
 function calculateResult() {
     try {
-        const result = eval(document.getElementById("result").value);
-        document.getElementById("result").value = result;
+        result.value = eval(result.value);
     } catch (error) {
-        document.getElementById("result").value = "Error";
+        result.value = 'Error';
     }
 }
+
+function handleKeyPress(event) {
+    if (event.key === 'Enter') {
+        calculateResult();
+    }
+}
+
+
+function filterInput() {
+    const input = result.value;
+    const filteredInput = input.replace(/[^0-9+\-*/().\s]/g, ''); // Replace anything other than numbers and valid operators
+
+    if (input !== filteredInput) {
+        result.value = filteredInput;
+    }
+}
+
+

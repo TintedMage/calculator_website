@@ -1,101 +1,112 @@
-/* font family */
-/* import monsterrat; */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
-/* import Barlow condensed; */
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Barlow+Condensed:400,700&display=swap');
 
-h1{font-family: Barlow condensed , sans-serif;font-size: 3em;margin: 0;}
-button{	font-family: Montserrat, sans-serif;}
-section {margin: 2em;}
-p{width: 20vw;	font-family: Montserrat, sans-serif;}
+/* Reset heading margins */
+h1,h2 {
+    margin: 0;
+	font-family: Barlow Condensed, sans-serif;
+	font-size: 2.5em;
+}
+p {
+	font-family: Montserrat, sans-serif;
+}
+
 body {
     display: flex;
+	flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 100vh;
+    background-color: #f2f2f2;
+    font-family: Arial, sans-serif;
+	padding: 2em;
+}
+footer {
+	display: flex;
 	flex-direction: column;
-	background-color: beige;
-	color: #101010;
+	align-items: center;
+}
+footer hr {
+width: 100%;
+margin: 1.5em 0 -0.5em;
+}
+section {
+	margin: 1em;	
 }
 
 main {
-	height: 100vh;
+	margin-top: 1em;
 	display: flex;
-	flex-direction:row;
+	flex-direction: row;
 	align-items: center;
+	justify-content: center;
+	padding: 1em;
+	width: 100%;
+	min-width: 300px;
+	max-width: 600px;
+	border-radius: 15px;
+	background-color: #fff;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-.calculator {
-	background-color: rgb(255, 255, 255);
-    padding: 1.3em;
-	box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.291);
-    border-radius: 10px;
+.calc-cont {
+	border-radius: 5px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.calc {
 	display: flex;
 	flex-direction: column;
-}
-
-
-input {
-	align-self: center;
-	margin: 1em;
-  	font-size: 2em;
+	align-items: center;
+	justify-content: center;
 	padding: 1em;
-	font-family: Barlow condensed, sans-serif;
-	border-radius: 5px;
-	border: none;
-	outline: none;
-	box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.368);
-	background-color: #dfdfdf;
-	width: 100%;
-	text-align: left;
+	width: 250px;
 }
-input:focus {
-	background-color: #bdbdbd;
+.calc-btn-cont {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
 }
-
-
-#clear_btn {
-    width: 5em;
-	align-self: flex-end;
-	margin-right: 2em;
-	
-}
-#compute_btn , #clear_btn {
-	background-color: #979797;
-	color: rgb(255, 255, 255);
-}
-
-.buttons {
-	margin: 2em;
-    display: grid;
-	grid-template-columns: repeat(4, 1fr);
-    grid-gap: 1em;
-}
-
 button {
-    font-size: 1em;
-    padding: 10px;
-    cursor: pointer;
-    border-radius: 5px;
-    border: none;
+    flex: 1;
+    margin: 5px;
+    padding: 15px;
+    font-size: 18px;
     background-color: #eee;
-    flex: 1; 
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 button:hover {
     background-color: #ddd;
 }
 
-@media only screen and (max-width: 780px) {
-	main {
-		display: flex;
-		flex-direction:column;
-	}
-	p {
-		width: 100%;
-	}
-	button {
-		padding: 1.5em;
-	}
-	
+.input-field {
+	background-color: #dfdfdf;
+	margin: 1em;
+    width: 105%;
+    padding: 1.5em;
+    border: none;
+    border-radius: 5px;
+    text-align: right;
+	box-shadow: 0 0 8px rgba(0, 0, 0, 0.45);
+	outline: none;
+	font-family: Montserrat, sans-serif;
+	font-size: 1em;
 }
- 
+.input-field::placeholder {
+	text-align: left;
+}
+
+
+
+
+
+/* Mobile Layout */
+@media only screen and (max-width: 767px) {
+	main {
+		flex-direction: column;
+	}
+}
